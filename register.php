@@ -12,6 +12,10 @@ include("./PHP/actions.php");
 </head>
 <body>
 <p>This is register page</p>
+<form action="./PHP/actions.php" method="post">
+<input type="submit" value="submit" name="register">
+</form>
   <a href="./">Index</a>
+
 </body>
 </html>

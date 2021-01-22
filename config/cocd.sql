@@ -99,3 +99,20 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+SELECT u.firstname,
+u.lastname,
+u.phone,
+u.address, u.email, u.image, ur.role_name AS user_role  FROM users u 
+JOIN user_roles ur ON ur.role=u.role
+WHERE 
+(CONVERT
+(`user_id` USING utf8) 
+LIKE '%g%' OR CONVERT(`lastname` USING utf8) 
+LIKE '%g%' OR CONVERT(`firstname` USING utf8) 
+LIKE '%g%' OR CONVERT(`phone` USING utf8) 
+LIKE '%g%' OR CONVERT(`address` USING utf8)
+LIKE '%g%' OR CONVERT(`email` USING utf8) 
+LIKE '%g%') 
