@@ -1,0 +1,5 @@
+RewriteEngine on
+
+RewriteRule ^login$ login.php
+RewriteRule ^register$ register.php
+RewriteRule ^search$ search.php
