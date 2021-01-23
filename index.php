@@ -2,7 +2,7 @@
 <?php
 
 include("./config/db.php");
-include("./PHP/actions.php");
+// include("./PHP/actions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
