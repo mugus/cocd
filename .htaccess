@@ -4,3 +4,4 @@ RewriteRule ^login$ login.php
 RewriteRule ^register$ register.php
 RewriteRule ^logout$ logout.php
 RewriteRule ^index$ index.php
+RewriteRule ^invitation$ invitation.php
