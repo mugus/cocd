@@ -9,7 +9,7 @@ include("./PHP/actions.php");
 <body>
   
   <?php include 'includes/navbar.php'; ?>
-
+<br>
 <form action="./PHP/actions.php" method="post">
   <div class="container">
     <div class="row">
@@ -26,7 +26,7 @@ include("./PHP/actions.php");
         </div>
         <p>Forget Password? <a href="">Request New Password</a></p>
         <input class="btn btn-block" style="background-color: #315C93!important;" type="submit" value="submit" name="login"><hr>
-        <p>No Account? <a href="">Request account</a></p>
+        <p>No Account? <a href="/cocd/register">Request account</a></p>
       </div>
       <div class="col-md-3"></div>
     </div>
