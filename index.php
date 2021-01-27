@@ -7,17 +7,17 @@
   
   <?php include 'includes/navbar.php'; ?>
 
-<!-- Start Top Search -->
-<div class="top-search">
-    <div class="container">
-        <div class="input-group">
-            <span class="input-group-addon"><i class="icofont-search-1"></i></span>
-            <input type="text" class="form-control" placeholder="Search">
-            <span class="input-group-addon close-search"><i class="icofont-close"></i></span>
-        </div>
-    </div>
-</div>
-<!-- End Top Search -->
+  <!-- Start Top Search -->
+  <div class="top-search">
+      <div class="container">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="icofont-search-1"></i></span>
+              <input type="text" class="form-control" placeholder="Search">
+              <span class="input-group-addon close-search"><i class="icofont-close"></i></span>
+          </div>
+      </div>
+  </div>
+  <!-- End Top Search -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">

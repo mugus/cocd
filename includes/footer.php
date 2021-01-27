@@ -9,17 +9,16 @@
           <div class="col-lg-5 col-md-6 footer-info">
             <h3>COCD-REFUGEE PORTAL</h3>
             <p>
-              A108 Adam Street <br>
-              NY 535022, USA<br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              P.O. Box 531 <br>
+              Dayton, OH 45401, USA<br><br>
+              <strong>Email:</strong> info@crossovercd.org<br>
             </p>
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="http://twitter.com/crossoverdayton" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/crossoverdayton" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
+              <a href="https://www.youtube.com/channel/UC9Vbm-QoZzRVcDJ3_daKUFw" class="youtube"><i class="bx bxl-youtube"></i></a>
+              <a href="https://www.linkedin.com/in/cross-over-community-development-568779177/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -29,7 +28,7 @@
           <div class="col-lg-5 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="/cocd/index">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.php">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Cases Management</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Mentor Reporting</a></li>
             </ul>
@@ -41,9 +40,11 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>COCD-REFUGEE PORTAL</span></strong>. All Rights Reserved
+        &copy; 2021-<script>document.write(new Date().getFullYear())</script> <strong><span> Cross Over Community Development</span></strong>.
       </div>
-      <!-- <div class="credits">Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a></div> -->
+      <div class="credits">
+        Powered by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
   </footer><!-- End Footer -->
 
@@ -64,3 +65,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.d810cf0ae7f39f28f336.js" type="text/javascript" ></script>
+
+

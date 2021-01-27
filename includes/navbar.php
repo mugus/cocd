@@ -20,22 +20,25 @@
     <div class="container">
 
       <div class="logo float-left">
-        <h1 class="text-light"><a href="/cocd/index"><span>COCD-Refugee Portal</span></a></h1>
+        <h1 class="text-light"><a href="index.html"><span>COCD-Refugee Portal</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/cocd/index">Home</a></li>
-          <li><a href="#about">Cases Management</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="caseRegister.php">Cases Management</a></li>
           <li><a href="#services">Mentor Reporting</a></li>
           <li></li>
-          <li><a href="/cocd/login">Login</a></li>
+          <li><a href="userRegistrationForm.php">Login</a></li>
           <li></li>
           <li class="search"><a href="#"><i class="icofont-search-1"></i></a></li>
         </ul>
       </nav><!-- .nav-menu -->
+
+      
+
 
     </div>
   </header><!-- End Header -->

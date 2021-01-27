@@ -1,7 +1,7 @@
 <?php 
 include("../config/db.php");
 session_start();
-if(isset($_GET['id']) && isset($_GET['code']) && isset($_GET['email']) && isset($_GET['time'])){
+if(isset($_GET['id']) && isset($_GET['code']) && isset($_GET['email']) && isset($_GET['role'])){
 	$id=$_GET['id'];
   $code=$_GET['code'];
   $email=$_GET['email'];
@@ -11,7 +11,11 @@ if(isset($_GET['id']) && isset($_GET['code']) && isset($_GET['email']) && isset(
   $ver = $db->prepare($sql);
   // $ver->bindParam(':email', $email);
   // $ver->bindParam(':role', $role);
-  $ver->execute([ 'email'=>$email,'role'=>$role]);
+  $ver->execute(array(
+		'email'=>$email,
+		'role'=>$role
+		)
+	);
   
   $_SESSION['email']=$email;
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2021 at 10:26 AM
+-- Generation Time: Jan 24, 2021 at 11:56 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -24,23 +24,67 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'cocd.admin');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `phone` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `gender` enum('Male','Female','male','female') NOT NULL,
+  `lastname` varchar(255) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
-  `role` int(7) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `image` mediumblob NOT NULL,
+  `role` int(7) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   `join_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `lastname`, `firstname`, `phone`, `email`, `role`, `username`, `password`, `image`, `join_at`) VALUES
+(1, 'MUHOZA', 'Gustave', '0788804330', 'muhozagustave1213@gmail.com', 0, 'mugus', '$2y$10$ynbKFN5CJ7SZwcMoSN1.7uahjqs5ZxCKy3X0V64hTpRijzJlWdNtS', NULL, '2021-01-24 10:21:59');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_verify`
+--
+
+CREATE TABLE `users_verify` (
+  `id` int(11) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `role` int(11) DEFAULT NULL,
+  `code` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users_verify`
+--
+
+INSERT INTO `users_verify` (`id`, `email`, `role`, `code`) VALUES
+(3, 'abaremy1997@gmail.com', 1, '110217375');
 
 -- --------------------------------------------------------
 
@@ -59,12 +103,18 @@ CREATE TABLE `user_roles` (
 --
 
 INSERT INTO `user_roles` (`id`, `role`, `role_name`) VALUES
-(1, 1, 'COCD Staff'),
-(2, 0, 'COCD Volunteer');
+(1, 1, 'Case Manager'),
+(2, 0, 'Mentor');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -72,6 +122,12 @@ INSERT INTO `user_roles` (`id`, `role`, `role_name`) VALUES
 ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`),
   ADD UNIQUE KEY `username` (`username`);
+
+--
+-- Indexes for table `users_verify`
+--
+ALTER TABLE `users_verify`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user_roles`
@@ -84,10 +140,22 @@ ALTER TABLE `user_roles`
 --
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `users_verify`
+--
+ALTER TABLE `users_verify`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_roles`
@@ -99,20 +167,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-
-SELECT u.firstname,
-u.lastname,
-u.phone,
-u.address, u.email, u.image, ur.role_name AS user_role  FROM users u 
-JOIN user_roles ur ON ur.role=u.role
-WHERE 
-(CONVERT
-(`user_id` USING utf8) 
-LIKE '%g%' OR CONVERT(`lastname` USING utf8) 
-LIKE '%g%' OR CONVERT(`firstname` USING utf8) 
-LIKE '%g%' OR CONVERT(`phone` USING utf8) 
-LIKE '%g%' OR CONVERT(`address` USING utf8)
-LIKE '%g%' OR CONVERT(`email` USING utf8) 
-LIKE '%g%') 

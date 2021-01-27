@@ -5,3 +5,9 @@ RewriteRule ^register$ register.php
 RewriteRule ^logout$ logout.php
 RewriteRule ^index$ index.php
 RewriteRule ^invitation$ invitation.php
+
+
+
+# HTID:16580744: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:16580744:
